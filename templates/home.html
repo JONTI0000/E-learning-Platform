@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+
+{% block content %}
+{% include "navbar.html" %}
+
+{% if user.is_authenticated %}
+<h1>Welcome back {{ user.username }}! </h1>
+
+
+{% else %}
+<p>You are not logged in</p>
+{% endif %}
+{% endblock %}

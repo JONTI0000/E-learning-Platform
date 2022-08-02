@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href='{% static "css/profile.css" %}'>
+{% include "navbar.html" %}
+
+<h1>Edit profile</h1>
+<div>
+    <form method="POST" >
+        {% csrf_token %}
+        <div class="container" >
+            <h3 class='grid-container' >E-mail</h3><br>
+            <div class="forms"> {{ form.email }} </div>
+            <h3 class='grid-container' >UserName</h3><br>
+            <div class="forms"> {{ form.username }} </div>
+            <h3 class='grid-container' >First Name</h3><br>
+            <div class="forms"> {{ form.first_name }} </div>
+            <h3 class='grid-container' >Last Name</h3><br>
+            <div class="forms"> {{ form.last_name }} </div>
+        </div>
+        <br>
+        <button id="link" >update</button>
+        <br>
+        <a id="link" href="{% url 'password' %}">Change password</a>
+    </form>
+</div>
+
+{% endblock %}

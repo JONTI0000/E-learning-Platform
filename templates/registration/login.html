@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}'>
+
+<style>
+    input[type=text],input[type=password], select {
+    width: 30%;
+    padding: 15px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(203, 180, 180);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+
+  .container{
+    padding-top: 200px;
+  }
+  
+</style>
+<body style="background-color:rgb(255, 255, 255) ;">
+<div class="container">
+<div class="form" style="background-color:white;border-style: solid ;border-color: black;border-width: 3px;width:50%;">
+    <p style="font-size:20px">Enter the relavent login details provided by the admin</p>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <button type="submit" id="submit">Log In</button>
+    </form>
+</div>
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href='{% static "css/session.css" %}'>
+
+
+{% include "navbar.html" %}
+
+<h1>{{ lecturer.name }}</h1>
+<p>{{ lecturer.description|safe }}</p>
+
+{% if user.is_authenticated %}
+<h1>Conducted sessions</h1>
+<div class="grid-container">
+{% for session in sessions %}
+{% if session.lecturer == lecturer.name %}
+    <div class="grid_item">
+        <a id="link" href="{% url 'class' session.id %}"> {{ session.name }} </a>
+        <h3 id="lect">lecturer: {{ session.lecturer }}</h3><br>
+        <h3 id="time">Time : {{ session.time }}</h3>
+    </div>
+{% endif %}
+{% endfor %}
+{% endif %}
+</div>
+
+
+
+{% endblock %}

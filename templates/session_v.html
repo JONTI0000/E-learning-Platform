@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href='{% static "css/session.css" %}'>
+
+<div class="grid-container">
+    {% for class in sessions %}
+    <div class="grid_item">
+        <a id="link" href="{% url 'class' class.id %}"> {{ class.name }} </a>
+        <h3 id="lect">lecturer: {{ class.lecturer }}</h3><br>
+        <h3 id="time">Time : {{ class.time }}</h3>
+    </div>
+    {% endfor %}
+</div>
+

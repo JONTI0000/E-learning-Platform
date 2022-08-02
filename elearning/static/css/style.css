@@ -1,0 +1,47 @@
+.heading {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+    text-decoration-color: black;
+
+}
+
+
+body {
+    background-color: #2f3e38;
+}
+
+.form {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Trebuchet MS';
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 15px;
+    border-radius: 20px;
+}
+
+
+
+
+#submit {
+    background-color: #0ed089;
+    border: none;
+    color: white;
+    padding: 16px 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+
+#submit:hover {
+    color: black;
+    background-color: #0db476;
+
+}
