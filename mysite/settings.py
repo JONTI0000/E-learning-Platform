@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import django_heroku
 
-django_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -145,3 +144,5 @@ LOGOUT_REDIRECT_URL = "home"
 #mdeia
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'image') 
 MEDIA_URL = '/image/'
+
+django_heroku.settings(locals())
