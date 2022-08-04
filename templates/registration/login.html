@@ -21,14 +21,17 @@
 
   .container{
     padding-top: 200px;
-    padding-left: 20px;
+    padding-left: 50px;
+    align-self: center;
   }
   
 </style>
-<body style="background-color:rgb(255, 255, 255) ;">
+<body style="background-color:#7950f2 ;">
 <div class="container">
-<div class="form" style="background-color:white;border-style: solid ;border-color: black;border-width: 3px;width:50%;">
-    <p style="font-size:20px">Enter the relavent login details provided by the admin</p>
+<div class="form" style="background-color:#d0bfff;border-style: solid ;border-color: black;border-width: 3px;width:50%;font-family: 'Comfortaa', sans-serif;
+">
+    <p style="font-size:20px;font-family: 'Comfortaa', sans-serif;
+    ">Enter the relavent login details provided by the admin</p>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}

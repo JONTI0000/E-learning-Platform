@@ -1,7 +1,7 @@
 .heading {
     text-align: center;
     font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Comfortaa", sans-serif;
     text-decoration: underline;
     text-decoration-color: black;
 
@@ -15,7 +15,7 @@ body {
 .form {
     text-align: center;
     font-size: 30px;
-    font-family: 'Trebuchet MS';
+    font-family: "Comfortaa", sans-serif;
     background-color: rgb(255, 255, 255);
     padding: 20px;
     margin-left: 20%;
