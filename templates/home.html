@@ -30,7 +30,12 @@
           Start your journey to success with <br />
           <strong class="alo-elearning">alo e-learning</strong>
         </h1>
-        <a href="#" class="start-btn">Get started</a>
+        {% if user.is_authenticated %}
+
+        {% else %}
+        <a href="{% url 'register' %}" class="start-btn">Get started</a>
+        {% endif %}
+
 
         <!-- <img src="1-start.png" class="1-img" /> -->
       </div>

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.forms import PasswordChangeForm,UserCreationForm
 from elearning.forms import editprofileform
 from .models import session,lecturer
 from django.views import generic
@@ -45,6 +45,12 @@ def lecturer_view(request, my_id):
         "sessions":sessions 
     }
     return render(request, "lecturer.html", context)
+
+class user_register_view(generic.CreateView):
+    form_class=UserCreationForm
+    template_name="registration/register.html"
+    success_url=reverse_lazy("login")
+
 
 class user_edit_view(generic.UpdateView):
     form_class=editprofileform

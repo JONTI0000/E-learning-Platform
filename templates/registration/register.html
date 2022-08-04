@@ -1,23 +1,21 @@
-
 {% block content %}
+<title>Register</title>
 {% load static %}
+<link rel="stylesheet" type="text/css" href='{% static "css/register.css" %}'>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700;800;1000&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" type="text/css" href='{% static "css/login.css" %}'>
-<style>
 
-</style>
-<title>Login</title>
 <body>
-<center><div class="grid">
-    <p>Enter the relavent login details</p>
+  <center><h1>Register User</h1></center>
+
+<div class="grid">
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button id="link" type="submit" >Log In</button>
+        <center><button type="submit" id="link">Create User</button></center>
     </form>
-</div></center>
+</div>
 </body>
 {% endblock %}

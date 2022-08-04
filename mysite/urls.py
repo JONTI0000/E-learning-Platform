@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView  # new
-from elearning.views import about_view, session_view, class_view,lecturer_view,lecturers_view,user_edit_view,passwordschangeview,password_success
+from elearning.views import about_view, session_view, class_view,lecturer_view,lecturers_view,user_edit_view,passwordschangeview,password_success,user_register_view
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -32,6 +32,7 @@ urlpatterns = [
     path("profile/",user_edit_view.as_view() , name="profile"),
     path("password/",passwordschangeview.as_view(template_name="registration/change-password.html"),name="password"),
     path("password_success",password_success,name="password_success"),
+    path("register/",user_register_view.as_view(),name="register"),
 
 
 
