@@ -21,6 +21,7 @@
 
   .container{
     padding-top: 200px;
+    padding-left: 20px;
   }
   
 </style>
@@ -30,7 +31,6 @@
     <p style="font-size:20px">Enter the relavent login details provided by the admin</p>
     <form method="post">
         {% csrf_token %}
-
         {{ form.as_p }}
         <button type="submit" id="submit">Log In</button>
     </form>
