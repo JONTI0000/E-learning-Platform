@@ -1,71 +1,25 @@
-<style>
-    * {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
 
-ul{
-	display: flex;
-	width: 100%;
-	height: 80vh;
-	margin: auto;
-	max-width: 1000px;
-	justify-content: space-between;
-	text-align: center;
-}
-li {
-	padding: 1rem 2rem 1.15rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: #ebebeb;
-	min-width: 80px;
-}
+{% load static %}
+<link rel="stylesheet" type="text/css" href='{% static "css/style1.css" %}'>
 
-li:hover {
-    background-color:#ccc;
-    background-size: 100% 100%;
-  color: #27262c;
-  animation: spring 300ms ease-out;
-  text-shadow: 0 -1px 0 #ef816c;
-	font-weight: bold;
-}
-li:active {
-  transform: translateY(4px);
-}
 
-@keyframes spring {
-  15% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.2, 1.1);
-  }
-  40% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(0.95, 0.95);
-  }
-  75% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.05, 1);
-  }
-  100% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1, 1);
-  }
-}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700;800;1000&display=swap" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet" />
+      <nav>
+        <div class="nav-logo">alo</div>
+        <a href="{% url 'home' %}" class="nav-el">Home</a>
+        <a href="{% url 'lecturers' %}" class="nav-el">Lecturers</a>
+        <a href="{% url 'about' %}" class="nav-el">About us</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'profile' %}" class="nav-el">Profile</a>
+        <a href="{% url 'session' %}" class="nav-el">Sessions</a>
+        <a href="{% url 'logout' %}" class="nav-el">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}" class="nav-el login-btn">Login</a>
+        {% endif %}
 
-.shameless-plug{
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  padding: 8px 20px;
-  color: #ccc;
-  text-decoration: none;
-}
 
-</style>
-<ul>
-	<li>Home</li>
-	<li>About</li>
-	<li>Gallery</li>
-	<li>Contact us</li>
-</ul>
+      </nav>
+

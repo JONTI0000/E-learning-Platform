@@ -5,13 +5,41 @@
 
 
 {% block content %}
-{% include "navbar.html" %}
-
+{% include "nav.html" %}
 {% if user.is_authenticated %}
-<h1>Welcome back {{ user.username }}! </h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Alo | E-Learning Platform</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700;800;1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      <div class="section-1">
+        <p class="first-line">Learn. Anywhere. Anytime.</p>
+        <h1>
+          Start your journey to success with <br />
+          <strong class="alo-elearning">alo e-learning</strong>
+        </h1>
+        <a href="#" class="start-btn">Get started</a>
+
+        <!-- <img src="1-start.png" class="1-img" /> -->
+      </div>
+    </header>
+  </body>
+</html>
 {% else %}
-<p>You are not logged in</p>
+<p>not logged in</p>
 {% endif %}
+
+
 {% endblock %}
