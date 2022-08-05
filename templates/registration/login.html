@@ -12,9 +12,18 @@
 
 </style>
 <title>Login</title>
+<style>
+    img{
+    height: 100px;
+    width: auto;
+}
+
+</style>
 <body>
 <center><div class="grid">
+    <img src="{% static 'css/logo.png' %}" alt="logo">  
     <p>Enter the relavent login details</p>
+      
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}

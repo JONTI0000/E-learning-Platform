@@ -4,9 +4,9 @@ body {
 }
 .grid{
     height: auto;
-    width: 60%;
+    width: 40%;
     display: block;
-    background-color: #9775fa;
+    background-color: #ffffff;
     border-radius: 30px;
     font-size:30px ;
     padding-top: 20px;
