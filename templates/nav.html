@@ -24,6 +24,7 @@
         <a href="{% url 'session' %}" class="nav-el">Sessions</a>
         <a href="{% url 'logout' %}" class="nav-el">Logout</a>
         {% else %}
+        <a href="{% url 'register' %}" class="nav-el login-btn">Sign Up</a>
         <a href="{% url 'login' %}" class="nav-el login-btn">Login</a>
         {% endif %}
 
