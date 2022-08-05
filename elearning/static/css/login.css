@@ -3,7 +3,7 @@ body {
     padding-top:10%;
 }
 .grid{
-    height: 40%;
+    height: auto;
     width: 60%;
     display: block;
     background-color: #9775fa;
@@ -11,6 +11,7 @@ body {
     font-size:30px ;
     padding-top: 20px;
     font-family: "Comfortaa", sans-serif;
+    padding-bottom: 10px;
 }
 
 input[type=text],input[type=password], select {
