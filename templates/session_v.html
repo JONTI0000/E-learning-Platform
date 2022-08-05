@@ -82,8 +82,13 @@
 .grid_item:hover #time {
   color: #fff;
 }
+.screen{
+  height: 100vh;
+  
+}
 
 </style>
+<div class="screen" >
 <div class="grid-container">
     {% for class in sessions %}
     <div class="grid_item">
@@ -93,5 +98,9 @@
         <h3 id="time">{{ class.time }}</h3>
     </div>
     {% endfor %}
+  </div>
 </div>
+
+{% include "footer.html" %}
+
 {% endblock %}
