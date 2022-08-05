@@ -30,7 +30,7 @@ input[type=text],input[type=password], select {
     border: none;
     color: white;
     padding: 16px 50px;
-    border-radius: 5px;
+    border-radius: 15px;
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
