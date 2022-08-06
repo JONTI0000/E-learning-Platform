@@ -9,10 +9,14 @@
 <style>
     .grid-container {
   /* background-color: #fff; */
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 300px;
+  row-gap: 4%;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px 40px;
+  
 }
 
 .grid_item {
@@ -83,8 +87,20 @@
   color: #fff;
 }
 .screen{
-  height: 1000px;
   margin-bottom: 500px;
+
+}
+
+@media (max-width: 1300px) {
+ .grid-container  {
+  grid-template-columns:  auto auto;
+  }
+}
+@media (max-width:850px) {
+  .grid-container  {
+   grid-template-columns:  auto;
+   grid-template-rows:  auto;
+  }
 
 }
 
