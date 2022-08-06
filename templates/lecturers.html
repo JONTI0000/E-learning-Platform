@@ -2,9 +2,15 @@
 {% block content %}
 <title>Lecturers</title>
 {% include "nav.html" %}
-<h1>Our team</h1>
+
+<center><h1>Our team</h1></center>
 
 <style>
+  body{
+    font-family: "comfortaa", sans-serif;
+  }
+
+
     .grid-container{
         display: grid;
         grid-template-columns: 500px 500px;
@@ -13,6 +19,7 @@
         row-gap: 60px;
         column-gap: 60px;
         padding: 20px;
+        font-family: "comfortaa", sans-serif;
 
     }
 
@@ -26,50 +33,31 @@
 
     #anchor{
         display: block;
-        background-color: #d0bfff;
+        background-color: #7950f2;
         text-decoration: none;
         color: black;
-        font-size: 20px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25px;
+        font-family: "comfortaa", sans-serif;
         padding:5px 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     h3{
       background-color: none;
       font-size: 25px;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: "comfortaa", sans-serif;
       padding-bottom: 4px;
     }
 
     #anchor:hover{
-        background-color: cadetblue;
+        background-color: #bca6fd;
         color: white;
         animation: spring 300ms ease-out;
   text-shadow: 0 -1px 0 #fbd6cf;
 	font-weight: bold;
     }
 
-    #anchor:active{
-  transform: translateY(4px);
-}
-@keyframes spring {
-  15% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.2, 1.1);
-  }
-  40% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(0.95, 0.95);
-  }
-  75% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1.05, 1);
-  }
-  100% {
-    -webkit-transform-origin: center center;
-    -webkit-transform: scale(1, 1);
-  }
-}
 
 
     img{
