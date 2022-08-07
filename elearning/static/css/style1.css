@@ -18,7 +18,7 @@ header {
 
   position: relative;
   background-image: url(bg5.jpg);
-  background-size: cover;
+  background-size: contain;
   border-bottom-right-radius: 38px;
   border-bottom-left-radius: 38px;
 }
