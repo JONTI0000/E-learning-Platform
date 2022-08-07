@@ -76,9 +76,14 @@
         margin: 20px;
         font-size: 35px;
       }
+      .screen{
+  margin-bottom: 700px;
+
+}
     </style>
   </head>
   <body>
+    <div class="screen" >
     <div class="container">
       <div class="description-tile">
         <p class="discription-para">{{ lecturer.description|safe }}</p>
@@ -92,6 +97,7 @@
       </div>
     </center>
     </div>
+  </div>
     {% include "footer.html" %}
   </body>
 </html>
