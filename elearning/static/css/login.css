@@ -29,7 +29,7 @@ input[type=text],input[type=password], select {
     background-color: #7950f2;
     border: none;
     color: white;
-    padding: 16px 50px;
+    padding: 16px 15%;
     border-radius: 15px;
     text-decoration: none;
     margin: 4px 2px;
